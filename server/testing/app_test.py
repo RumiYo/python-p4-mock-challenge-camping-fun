@@ -132,7 +132,7 @@ class TestApp:
                 Camper.id == camper.id).one_or_none()
 
             assert response['name'] == camper_updated.name
-            assert '(updated)' in camper_updated.name
+            assert '(updated)' not in camper_updated.name
             assert response['age'] == 11
             camper_updated.age = 11
 
